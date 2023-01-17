@@ -42,16 +42,16 @@ public class BalancedBrackets {
             if (row.equals("(")) {
                 //if last bracket was also opened they are not balanced
                 if (lastOpened) isBalanced = false;
-                //else  change to last bracket to opened
+                    //else  change to last bracket to opened
                 else lastOpened = true;
-            //check if its closing bracket
+                //check if its closing bracket
             } else if (row.equals(")")) {
                 //if last bracket was also closed they are not balanced
                 if (!lastOpened) isBalanced = false;
                     //else  change to last bracket to closed
                 else lastOpened = false;
             }
-            //if they are not balanced no point in continuing so break the loop
+            //if they are not balanced, no point in continuing so break the loop
             if (!isBalanced) break;
         }
         //if we have balanced and last bracket is a closing one
