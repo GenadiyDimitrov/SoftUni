@@ -1,4 +1,4 @@
-package II_DataTypesAndVariable.T9_Exercise.MoreExersises;
+package II_DataTypesAndVariable.T9_Exercise.MoreExercises;
 
 import java.util.Scanner;
 
@@ -24,13 +24,13 @@ public class DataTypeFinder {
             String dataType = "string";
             try {
                 //try parse command as int
-                int i = Integer.parseInt(command);
+                Integer.parseInt(command);
                 //if success set dataType
                 dataType = "integer";
             } catch (Exception ex) {
                 try {
                     //try parse command as double
-                    double d = Double.parseDouble(command);
+                    Double.parseDouble(command);
                     //if success set dataType
                     dataType = "floating point";
                 } catch (Exception exe) {

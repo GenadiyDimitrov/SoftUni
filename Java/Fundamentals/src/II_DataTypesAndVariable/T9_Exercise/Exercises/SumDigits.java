@@ -1,4 +1,4 @@
-package II_DataTypesAndVariable.T9_Exercise.Exersises;
+package II_DataTypesAndVariable.T9_Exercise.Exercises;
 
 import java.util.Scanner;
 

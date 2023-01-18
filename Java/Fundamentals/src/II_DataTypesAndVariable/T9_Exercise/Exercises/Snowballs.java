@@ -1,4 +1,4 @@
-package II_DataTypesAndVariable.T9_Exercise.Exersises;
+package II_DataTypesAndVariable.T9_Exercise.Exercises;
 
 import java.util.Scanner;
 
@@ -52,7 +52,7 @@ public class Snowballs {
             int time = Integer.parseInt(sc.nextLine());
             int quality = Integer.parseInt(sc.nextLine());
             //calculate value
-            double value = Math.pow((double) (snow / time), quality);
+            double value = Math.pow(((double) snow / time), quality);
             //if better than before override
             if (value > bestValue) {
                 bestValue = value;

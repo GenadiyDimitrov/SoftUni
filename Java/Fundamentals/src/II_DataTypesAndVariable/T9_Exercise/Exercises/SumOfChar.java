@@ -1,4 +1,4 @@
-package II_DataTypesAndVariable.T9_Exercise.Exersises;
+package II_DataTypesAndVariable.T9_Exercise.Exercises;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ public class SumOfChar {
         int sum = 0;
         for (int i = 0; i < n; i++) {
             char character = sc.nextLine().charAt(0);
-            sum += (int) character;
+            sum += character;
         }
         System.out.printf("The sum equals: %d", sum);
         sc.close();
