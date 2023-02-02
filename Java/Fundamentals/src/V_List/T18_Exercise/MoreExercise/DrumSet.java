@@ -42,17 +42,55 @@ Constraints
 public class DrumSet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //get the balance
         double balance = Double.parseDouble(sc.nextLine());
+        //get initial drum set
         List<Integer> initialDrumSet = Arrays.stream(sc.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
-        List<Integer> currentDrumSet = initialDrumSet;
+        //copy as current
+        List<Integer> currentDrumSet = new java.util.ArrayList<>(List.copyOf(initialDrumSet));
+        //get inital command
         String command = sc.nextLine();
-        int currentIndex = 0;
+        //loop until hit it again
         while (!command.equals("Hit it again, Gabsy!")) {
+            //get the power of hit
             int power = Integer.parseInt(command);
-
+            //foreach in the current set
+            for (int i = 0; i < currentDrumSet.size(); i++) {
+                //get current drum health
+                int currentDrum = currentDrumSet.get(i);
+                //save the diff in variable
+                int result = currentDrum - power;
+                //if dint broken
+                if (result > 0) {
+                    //replace with result
+                    currentDrumSet.set(i, result);
+                } else {
+                    //get original drum health
+                    int drumQuality = initialDrumSet.get(i);
+                    //check-if have enough money to buy new one
+                    if (balance - drumQuality * 3 > 0) {
+                        //decrease money with 3 times the health
+                        balance -= drumQuality * 3;
+                        //set to initial quality
+                        currentDrumSet.set(i, drumQuality);
+                    } else {
+                        //else remove from both lists
+                        currentDrumSet.remove(i);
+                        initialDrumSet.remove(i);
+                        i--;
+                    }
+                }
+            }
 
             command = sc.nextLine();
         }
+        //print result
+        StringBuilder result = new StringBuilder();
+        for (Integer drum : currentDrumSet) {
+            result.append(drum).append(" ");
+        }
+        System.out.println(result);
+        System.out.printf("Gabsy has %.2flv.", balance);
         sc.close();
     }
 }
