@@ -31,3 +31,4 @@ hs_err_pid*
 *.classpath
 *.project
 Java/Fundamentals/src/demo.java
+Java/Fundamentals/out/
