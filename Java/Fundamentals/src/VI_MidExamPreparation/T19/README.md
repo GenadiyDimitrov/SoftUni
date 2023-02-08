@@ -26,16 +26,16 @@ won battles** in the following format:
 
 ### Input / Constraints
 
-  - On the **first line,** you will receive **initial energy** – an
-    **integer \[1-10000\]**.
+- On the **first line,** you will receive **initial energy** – an
+  **integer \[1-10000\]**.
 
-  - On the **following lines,** you will be receiving the **distance**
-    of an enemy – an **integer** **\[1-10000\]**
+- On the **following lines,** you will be receiving the **distance**
+  of an enemy – an **integer** **\[1-10000\]**
 
 ### Output
 
-  - The description contains the proper output messages for each case
-    and the format they should be printed.
+- The description contains the proper output messages for each case
+  and the format they should be printed.
 
 ### Examples
 
@@ -83,120 +83,8 @@ won battles** in the following format:
 *The pirates need to carry a treasure chest safely back to the ship,
 looting along the way.*
 
-Create a program that **manages** the **state** of the **treasure
-chest** along the way. On the **first line,** you will receive the
-**initial loot** of the treasure chest, which is a **string** of
-**items** separated by a **"|"**.
-
-**"{loot<sub>1</sub>}|{loot<sub>2</sub>}|{loot<sub>3</sub>} …
-{loot<sub>n</sub>}"**
-
-The following lines represent commands **until** **"Yohoho\!"** which
-ends the treasure hunt:
-
-  - **"Loot {item<sub>1</sub>} {item<sub>2</sub>}…{item<sub>n</sub>}":**
-    
-      - Pick up treasure loot along the way. Insert the items at the
-        **beginning** of the chest.
-    
-      - If an item is **already** contained, **don't** insert it.
-
-  - **"Drop {index}":**
-    
-      - **Remove** the loot at the given **position** and **add** it at
-        the **end** of the treasure chest.
-    
-      - If the index is **invalid,** skip the command.
-
-  - > **"Steal {count}":**
-    
-      - > Someone steals the **last count** loot items. If there are
-        > **fewer items** than the given count, **remove as much** as
-        > there are.
-    
-      - > Print the stolen items separated by **", "**:
-
-**"{item<sub>1</sub>}, {item<sub>2</sub>}, {item<sub>3</sub>} …
-{item<sub>n</sub>}"**
-
-In the end, output the **average treasure gain,** which is the **sum**
-of all treasure items **length** divided by the **count** of all items
-inside the chest **formatted** to the **second decimal** point:
-
-**"Average treasure gain: {averageGain} pirate credits."**
-
-If the chest is **empty,** print the following message:
-
-**"Failed treasure hunt."**
-
-### Input
-
-  - On the **1<sup>st</sup> line,** you are going to receive the
-    **initial treasure chest (loot separated by "|")**
-
-  - On the following **lines**, until **"Yohoho\!"**, you will be
-    receiving commands.
-
-### Output
-
-  - Print the output in the **format** **described** **above**.
-
-### Constraints
-
-  - The **loot items** will be strings containing any ASCII code.
-
-  - The **indexes** will be integers in the range \[**-200**…**200**\]
-
-  - The **count** will be an integer in the range \[**1**….**100**\]
-
-### Examples
-
-<table>
-<tbody>
-<tr class="odd">
-<td><strong>Input</strong></td>
-<td><strong>Output</strong></td>
-</tr>
-<tr class="even">
-<td><p>Gold|Silver|Bronze|Medallion|Cup</p>
-<p>Loot Wood Gold Coins</p>
-<p>Loot Silver Pistol</p>
-<p>Drop 3</p>
-<p>Steal 3</p>
-<p>Yohoho!</p></td>
-<td><p>Medallion, Cup, Gold</p>
-<p>Average treasure gain: 5.40 pirate credits.</p></td>
-</tr>
-<tr class="odd">
-<td><strong>Comments</strong></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><p>The first command <strong>"Loot Wood Gold Coins"</strong> adds <strong>Wood</strong> and <strong>Coins</strong> to the chest but <strong>omits</strong> Gold since it is already contained. The chest now has the following items:</p>
-<p><strong>Coins Wood Gold Silver Bronze Medallion Cup</strong></p>
-<p>The <strong>second</strong> command adds <strong>only Pistol</strong> to the chest</p>
-<p>The <strong>third</strong> command <strong>"Drop 3"</strong> removes the <strong>Gold</strong> from the chest, but immediately adds it at the <strong>end</strong>:</p>
-<p><strong>Pistol Coins Wood Silver Bronze Medallion Cup Gold</strong></p>
-<p>The <strong>fourth</strong> command <strong>"Steal 3"</strong> removes the <strong>last 3</strong> items <strong>Medallion</strong>, <strong>Cup</strong>, <strong>Gold</strong> from the chest and prints them.</p>
-<p>In the end calculate the average treasure gain which is the sum of all items length Pistol(<strong>6</strong>) + Coins(<strong>5</strong>) + Wood(<strong>4</strong>) + Silver(<strong>6</strong>) + Bronze(<strong>6</strong>) = <strong>27</strong> and <strong>divide</strong> it by the count 27 / 5 = <strong>5.4</strong> and format it to the <strong>second decimal</strong> point.</p></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>Input</strong></td>
-<td><strong>Output</strong></td>
-</tr>
-<tr class="even">
-<td><p>Diamonds|Silver|Shotgun|Gold</p>
-<p>Loot Silver Medals Coal</p>
-<p>Drop -1</p>
-<p>Drop 1</p>
-<p>Steal 6</p>
-<p>Yohoho!</p></td>
-<td><p>Coal, Diamonds, Silver, Shotgun, Gold, Medals</p>
-<p>Failed treasure hunt.</p></td>
-</tr>
-</tbody>
-</table>
+**Solution at** *(duplicate)***:**
+https://github.com/GenadiyDimitrov/SoftUni/blob/main/Java/Fundamentals/src/III_Arrays/T12_Exercise/Exercises/TreasureHunt.java
 
 ## Memory Game
 
@@ -223,33 +111,33 @@ Then print this message on the console:
 
 ### Input
 
-  - **On the first line, you will receive a sequence of elements.**
+- **On the first line, you will receive a sequence of elements.**
 
-  - **On the following lines, you will receive integers until the
-    command "end".**
+- **On the following lines, you will receive integers until the
+  command "end".**
 
 ### Output
 
-  - Every time the player hit **two matching elements**, you should
-    **remove** them from the sequence and **print** on the console the
-    following message:
+- Every time the player hit **two matching elements**, you should
+  **remove** them from the sequence and **print** on the console the
+  following message:
 
 **"Congrats\! You have found matching elements - ${element}\!"**
 
-  - If the player hit **two different elements**, you should **print**
-    on the console the following message:
+- If the player hit **two different elements**, you should **print**
+  on the console the following message:
 
 **"Try again\!"**
 
-  - If the player hit **all matching elements** before he receives
-    **"end"** from the console, you should **print** on the console the
-    following message:
+- If the player hit **all matching elements** before he receives
+  **"end"** from the console, you should **print** on the console the
+  following message:
 
 **"You have won in {number of moves until now} turns\!"**
 
-  - If the player receives **"end"** **before** **he hits all matching
-    elements**, you should **print** on the console the following
-    message:
+- If the player receives **"end"** **before** **he hits all matching
+  elements**, you should **print** on the console the following
+  message:
 
 **"Sorry you lose :(**
 
@@ -257,8 +145,8 @@ Then print this message on the console:
 
 ### Constraints
 
-  - **All elements in the sequence will always have a matching
-    element.**
+- **All elements in the sequence will always have a matching
+  element.**
 
 ### Examples
 
