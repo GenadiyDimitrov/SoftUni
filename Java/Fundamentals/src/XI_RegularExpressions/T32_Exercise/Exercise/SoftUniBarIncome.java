@@ -94,18 +94,27 @@ public class SoftUniBarIncome {
     }
 
     private static Customer checkValidInput(String input) {
-        String patternString = "/%([A-Z][a-z]*)%[^|$%.]*?<(\\w+)>[^|$%.]*?\\|(\\d+)\\|[^|$%.]*?([0-9]+(\\.[0-9]+)?)\\$/";
+        String patternString = "%([A-Z][a-z]*)%[^|$%.]*?<(\\w+)>[^|$%.]*?\\|(\\d+)\\|[^|$%.]*?([0-9]+(\\.[0-9]+)?)\\$";
         Pattern pattern = Pattern.compile(patternString);
         Matcher matcher = pattern.matcher(input);
+        Customer customer = null;
         if (matcher.find()) {
-            return new Customer(
-                    matcher.group(1),
-                    matcher.group(2),
-                    Double.parseDouble(matcher.group(4)),
-                    Integer.parseInt(matcher.group(3))
-            );
+            String name = matcher.group(1);
+            String product = matcher.group(2);
+            int quantity = Integer.parseInt(matcher.group(3));
+            double price = Double.parseDouble(matcher.group(4));
+            if (name.length() > 0) {
+                if (product.length() > 0) {
+                    if (quantity > 0) {
+                        if (price > 0) {
+                            customer = new Customer(name, product, price, quantity);
+                        }
+                    }
+                }
+            }
+
         }
-        return null;
+        return customer;
     }
 
 }
