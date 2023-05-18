@@ -1,4 +1,4 @@
-﻿public interface IRun
+﻿internal interface IRun
 {
     void Run();
 }
@@ -8,14 +8,12 @@ internal class Program
     static void Main(string[] args)
     {
         //Change Class for Exersice
-        _run = new ReverseAString();
+        _run = new Wardrobe();
         _run.Run();
     }
 }
 
-//PASTE RUN CLASS HERE VVVVV
-
-
+//PASTE RUN CLASS HERE FOR JUDGE VVVVV
 
 //^^^^^^^
 
