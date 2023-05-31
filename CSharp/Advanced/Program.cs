@@ -8,7 +8,7 @@ internal class Program
     static void Main(string[] args)
     {
         //Change Class for Exersice
-        _run = new Wardrobe();
+        _run = new TriFunction();
         _run.Run();
     }
 }
