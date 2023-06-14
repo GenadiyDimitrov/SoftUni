@@ -19,15 +19,13 @@ namespace DefiningClasses
         {
             Model = model;
         }
-        public Car(string model, double amount, double consumption)
+        public Car(string model, double amount, double consumption) : this(model)
         {
-            Model = model;
             FuelAmount = amount;
             FuelConsumptionPerKilometer = consumption;
         }
-        public Car(string model, Engine engine, Cargo cargo, Tire[] tires)
+        public Car(string model, Engine engine, Cargo cargo, Tire[] tires) : this(model)
         {
-            Model = model;
             Engine = engine;
             Cargo = cargo;
             Tires = tires;

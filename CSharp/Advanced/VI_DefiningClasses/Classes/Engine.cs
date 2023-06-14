@@ -14,15 +14,17 @@ namespace DefiningClasses
         int _speed = 0;
         int _power = 0;
         public Engine() { }
-        public Engine(int speed, int power)
+        public Engine(int power)
         {
-            Speed = speed;
             Power = power;
         }
-        public Engine(string model, int power)
+        public Engine(int speed, int power) : this(power)
+        {
+            Speed = speed;
+        }
+        public Engine(string model, int power) : this(power)
         {
             Model = model;
-            Power = power;
         }
 
         public string Efficiency
