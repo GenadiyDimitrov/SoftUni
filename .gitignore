@@ -33,7 +33,10 @@ hs_err_pid*
 Java/Fundamentals/src/demo.java
 Java/Fundamentals/out/
 CSharp/.vs/
-CSharp/Advanced/bin/
-CSharp/Advanced/obj/
+CSharp/Advanced/Advanced/bin/
+CSharp/Advanced/Advanced/obj/
 CSharp/OOP/bin/
 CSharp/OOP/obj/
+*/bin/
+*/obj/
+*/.vs/
