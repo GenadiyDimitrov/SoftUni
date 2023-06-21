@@ -35,6 +35,6 @@ Java/Fundamentals/out/
 CSharp/.vs/
 CSharp/Advanced/Advanced/bin/
 CSharp/Advanced/Advanced/obj/
-/bin/
-/obj/
-/.vs/
+bin/
+obj/
+.vs/
