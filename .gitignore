@@ -31,10 +31,7 @@ hs_err_pid*
 *.classpath
 *.project
 Java/Fundamentals/src/demo.java
-Java/Fundamentals/out/
-CSharp/.vs/
-CSharp/Advanced/Advanced/bin/
-CSharp/Advanced/Advanced/obj/
+out/
 bin/
 obj/
 .vs/
