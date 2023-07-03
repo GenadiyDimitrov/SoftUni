@@ -46,18 +46,18 @@ namespace PizzaCalories
         }
         public void AddTopping(string[] toppingData)
         {
-            AddTopping(new Topping(toppingData[0], double.Parse(toppingData[1])));
-        }
-        private void AddTopping(Topping topping)
-        {
             if (_toppings.Count >= toppingslimit)
             {
                 throw new ArgumentException("Number of toppings should be in range [0..10].");
             }
             else
             {
-                _toppings.Add(topping);
+                AddTopping(new Topping(toppingData[0], double.Parse(toppingData[1])));
             }
+        }
+        private void AddTopping(Topping topping)
+        {
+            _toppings.Add(topping);
         }
 
     }
