@@ -10,7 +10,7 @@
                 string command = Console.ReadLine();
                 while (!command.Equals("END"))
                 {
-                    string[] commandData = command.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                    string[] commandData = command.Split(" ");
                     switch (commandData[0])
                     {
                         case "Pizza":
