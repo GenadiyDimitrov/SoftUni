@@ -7,6 +7,7 @@
         {
             Vehicles.Add(CreateVehicle());
             Vehicles.Add(CreateVehicle());
+            Vehicles.Add(CreateVehicle());
 
             int rows = int.Parse(Console.ReadLine());
             for (int i = 0; i < rows; i++)
@@ -48,6 +49,11 @@
             {
                 double distance = double.Parse(commandTokens[2]);
                 Console.WriteLine(vehicle.Drive(distance));
+            }
+            else if (command == "DriveEmpty")
+            {
+                double distance = double.Parse(commandTokens[2]);
+                Console.WriteLine(vehicle.Drive(distance, true));
             }
             else if (command == "Refuel")
             {

@@ -8,6 +8,7 @@ namespace VechiclesExtension
 {
     internal class Bus : Vehicle
     {
+        protected override double AdditionalLitersPerKilometers { get; set; } = 1.4;
         public Bus(double fq, double lpkm, double tc) : base(fq, lpkm, tc)
         {
         }

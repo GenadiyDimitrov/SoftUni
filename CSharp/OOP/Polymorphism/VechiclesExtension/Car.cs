@@ -8,9 +8,10 @@ namespace VechiclesExtension
 {
     internal class Car : Vehicle
     {
-        private const double additionalFuelConsumption = 0.9;
-        public Car(double fq, double lpkm) : base(fq, lpkm + additionalFuelConsumption)
+        protected override double AdditionalLitersPerKilometers { get; set; } = 0.9;
+        public Car(double fq, double lpkm, double tc) : base(fq, lpkm, tc)
         {
         }
+
     }
 }

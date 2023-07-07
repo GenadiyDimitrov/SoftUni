@@ -10,29 +10,35 @@ namespace VechiclesExtension
     {
         public double FuelQuantity { get; set; }
         public double LitersPerKilometers { get; set; }
+        protected abstract double AdditionalLitersPerKilometers { get; set; }
         public double TankCapacity { get; set; }
         public Vehicle(double fq, double lpkm, double tc)
         {
-            FuelQuantity = fq;
             LitersPerKilometers = lpkm;
             TankCapacity = tc;
+            FuelQuantity = fq > TankCapacity ? 0 : fq;
         }
-        public string Drive(double distance)
+        public string Drive(double distance, bool empty = false)
         {
-            if (FuelQuantity < distance * LitersPerKilometers)
+            double lpkm = LitersPerKilometers + (empty ? 0 : AdditionalLitersPerKilometers);
+            if (FuelQuantity < distance * lpkm)
             {
                 throw new ArgumentException($"{this.GetType().Name} needs refueling");
             }
 
-            FuelQuantity -= distance * LitersPerKilometers;
+            FuelQuantity -= distance * lpkm;
 
             return $"{this.GetType().Name} travelled {distance} km";
         }
         public virtual void Refuel(double amount)
         {
-            if (amount < 0)
+            if (amount <= 0)
             {
                 throw new ArgumentException("Fuel must be a positive number");
+            }
+            if (FuelQuantity + amount > TankCapacity)
+            {
+                throw new ArgumentException($"Cannot fit {amount} fuel in the tank");
             }
             FuelQuantity += amount;
         }

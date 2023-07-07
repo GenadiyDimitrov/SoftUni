@@ -8,12 +8,19 @@ namespace VechiclesExtension
 {
     internal class Truck : Vehicle
     {
-        private const double additionalFuelConsumption = 1.6;
-        public Truck(double fq, double lpkm) : base(fq, lpkm + additionalFuelConsumption)
+        protected override double AdditionalLitersPerKilometers { get; set; } = 1.6;
+        public Truck(double fq, double lpkm, double tc) : base(fq, lpkm, tc)
         {
 
         }
         public override void Refuel(double amount)
-            => base.Refuel(amount * 0.95);
+        {
+            if (amount + FuelQuantity > TankCapacity)
+            {
+                throw new ArgumentException($"Cannot fit {amount} fuel in the tank");
+            }
+
+            base.Refuel(amount * 0.95);
+        }
     }
 }
