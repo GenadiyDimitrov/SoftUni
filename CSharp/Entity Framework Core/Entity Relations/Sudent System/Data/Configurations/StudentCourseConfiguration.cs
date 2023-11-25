@@ -11,11 +11,11 @@ namespace P01_StudentSystem.Data.Configurations
             builder.HasKey(e => new { e.StudentId, e.CourseId });
 
             builder.HasOne(e => e.Student)
-                .WithMany(s => s.CourseEnrollments)
+                .WithMany(s => s.StudentsCourses)
                 .HasForeignKey(e => e.StudentId);
 
             builder.HasOne(e => e.Course)
-                .WithMany(c => c.StudentsEnrolled)
+                .WithMany(c => c.StudentsCourses)
                 .HasForeignKey(e => e.CourseId);
         }
     }

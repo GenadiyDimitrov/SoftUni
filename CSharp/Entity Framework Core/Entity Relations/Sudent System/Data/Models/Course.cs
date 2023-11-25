@@ -5,8 +5,8 @@
         public Course()
         {
             this.Resources = new HashSet<Resource>();
-            this.HomeworkSubmissions = new HashSet<Homework>();
-            this.StudentsEnrolled = new HashSet<StudentCourse>();
+            this.Homeworks = new HashSet<Homework>();
+            this.StudentsCourses = new HashSet<StudentCourse>();
         }
 
         public int CourseId { get; set; }
@@ -23,8 +23,8 @@
 
         public ICollection<Resource> Resources { get; set; }
 
-        public ICollection<Homework> HomeworkSubmissions { get; set; }
+        public ICollection<Homework> Homeworks { get; set; }
 
-        public ICollection<StudentCourse> StudentsEnrolled { get; set; }
+        public ICollection<StudentCourse> StudentsCourses { get; set; }
     }
 }

@@ -7,12 +7,10 @@ namespace P01_StudentSystem
     {
         public static void Main()
         {
-            using (var context = new StudentSystemContext())
-            {
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
-                context.Database.Migrate();
-            }
+            using StudentSystemContext context = new();
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+            context.Database.Migrate();
         }
     }
 }

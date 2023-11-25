@@ -4,8 +4,8 @@
     {
         public Student()
         {
-            this.HomeworkSubmissions = new HashSet<Homework>();
-            this.CourseEnrollments = new HashSet<StudentCourse>();
+            this.Homeworks = new HashSet<Homework>();
+            this.StudentsCourses = new HashSet<StudentCourse>();
         }
 
         public int StudentId { get; set; }
@@ -18,8 +18,8 @@
 
         public DateTime? Birthday { get; set; }
 
-        public ICollection<Homework> HomeworkSubmissions { get; set; }
+        public virtual ICollection<Homework> Homeworks { get; set; }
 
-        public ICollection<StudentCourse> CourseEnrollments { get; set; }
+        public virtual ICollection<StudentCourse> StudentsCourses { get; set; }
     }
 }

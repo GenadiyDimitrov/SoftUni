@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using SoftUni.Models;
+﻿using SoftUni.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace SoftUni.Data
 {

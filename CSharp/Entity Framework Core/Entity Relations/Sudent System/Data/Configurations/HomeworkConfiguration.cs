@@ -24,14 +24,14 @@ namespace P01_StudentSystem.Data.Configurations
                 .IsRequired(true);
 
             builder.HasOne(e => e.Student)
-                .WithMany(s => s.HomeworkSubmissions)
+                .WithMany(s => s.Homeworks)
                 .HasForeignKey(e => e.StudentId);
 
             builder.Property(e => e.CourseId)
                 .IsRequired(true);
 
             builder.HasOne(e => e.Course)
-                .WithMany(c => c.HomeworkSubmissions)
+                .WithMany(c => c.Homeworks)
                 .HasForeignKey(e => e.CourseId);
         }
     }

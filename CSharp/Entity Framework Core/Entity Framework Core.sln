@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity Framework Introduction", "Entity Framework Introduction\Entity Framework Introduction.csproj", "{CBE0315C-8207-463D-A072-076FA2E22071}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity Framework Introduction", "Entity Framework Introduction\Entity Framework Introduction.csproj", "{CF75E2AF-C6ED-4095-91E0-4B4AA8C5D762}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student System", "..\Entity Relations\Student System.csproj", "{FAD77583-282E-4116-8BFA-9F5C30118444}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity Relations", "Entity Relations", "{58120044-14B9-4E4E-939F-8F163125CE95}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity Relations", "Entity Relations", "{1FB6FBA5-0DB0-4DC1-B110-C80DE7EE361D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student System", "Entity Relations\Sudent System\Student System.csproj", "{6ECB593D-87AE-4C7F-A88B-135FDABAC1A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Football Betting", "Football Betting", "{BE120CE1-8D17-4C1D-8221-E9BBD36DFB95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballBetting.App", "Entity Relations\Football Betting\FootballBetting.App\FootballBetting.App.csproj", "{B6CABBE2-FE5A-47A4-A8BC-B72D51AFDA31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballBetting.Data", "Entity Relations\Football Betting\FootballBetting.Data\FootballBetting.Data.csproj", "{6C81C70B-70D4-4D7C-996D-0EDCB1AB279F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballBetting.Data.Models", "Entity Relations\Football Betting\FootballBetting.Data.Models\FootballBetting.Data.Models.csproj", "{41620497-33A3-482A-9C44-C343D216312D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicHub", "LINQ\MusicHub\MusicHub.csproj", "{C64DD7C3-81F2-458F-A4C7-9F8D790EC109}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +25,40 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CBE0315C-8207-463D-A072-076FA2E22071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBE0315C-8207-463D-A072-076FA2E22071}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBE0315C-8207-463D-A072-076FA2E22071}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBE0315C-8207-463D-A072-076FA2E22071}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAD77583-282E-4116-8BFA-9F5C30118444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAD77583-282E-4116-8BFA-9F5C30118444}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAD77583-282E-4116-8BFA-9F5C30118444}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAD77583-282E-4116-8BFA-9F5C30118444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF75E2AF-C6ED-4095-91E0-4B4AA8C5D762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF75E2AF-C6ED-4095-91E0-4B4AA8C5D762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF75E2AF-C6ED-4095-91E0-4B4AA8C5D762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF75E2AF-C6ED-4095-91E0-4B4AA8C5D762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECB593D-87AE-4C7F-A88B-135FDABAC1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECB593D-87AE-4C7F-A88B-135FDABAC1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECB593D-87AE-4C7F-A88B-135FDABAC1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECB593D-87AE-4C7F-A88B-135FDABAC1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6CABBE2-FE5A-47A4-A8BC-B72D51AFDA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6CABBE2-FE5A-47A4-A8BC-B72D51AFDA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6CABBE2-FE5A-47A4-A8BC-B72D51AFDA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6CABBE2-FE5A-47A4-A8BC-B72D51AFDA31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C81C70B-70D4-4D7C-996D-0EDCB1AB279F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C81C70B-70D4-4D7C-996D-0EDCB1AB279F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C81C70B-70D4-4D7C-996D-0EDCB1AB279F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C81C70B-70D4-4D7C-996D-0EDCB1AB279F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41620497-33A3-482A-9C44-C343D216312D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41620497-33A3-482A-9C44-C343D216312D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41620497-33A3-482A-9C44-C343D216312D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41620497-33A3-482A-9C44-C343D216312D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64DD7C3-81F2-458F-A4C7-9F8D790EC109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64DD7C3-81F2-458F-A4C7-9F8D790EC109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64DD7C3-81F2-458F-A4C7-9F8D790EC109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64DD7C3-81F2-458F-A4C7-9F8D790EC109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FAD77583-282E-4116-8BFA-9F5C30118444} = {1FB6FBA5-0DB0-4DC1-B110-C80DE7EE361D}
+		{6ECB593D-87AE-4C7F-A88B-135FDABAC1A7} = {58120044-14B9-4E4E-939F-8F163125CE95}
+		{BE120CE1-8D17-4C1D-8221-E9BBD36DFB95} = {58120044-14B9-4E4E-939F-8F163125CE95}
+		{B6CABBE2-FE5A-47A4-A8BC-B72D51AFDA31} = {BE120CE1-8D17-4C1D-8221-E9BBD36DFB95}
+		{6C81C70B-70D4-4D7C-996D-0EDCB1AB279F} = {BE120CE1-8D17-4C1D-8221-E9BBD36DFB95}
+		{41620497-33A3-482A-9C44-C343D216312D} = {BE120CE1-8D17-4C1D-8221-E9BBD36DFB95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF5249B7-34B3-4FF8-A451-8BB7F06AADF4}
