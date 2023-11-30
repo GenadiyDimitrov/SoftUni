@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarDealer", "XML Processing
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop", "XML Processing\ProductShop\ProductShop.csproj", "{0AF3D3FD-F53D-4774-9D54-95C0D1A86A8F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices", "Invoices\Invoices.csproj", "{508CE01C-AFE7-478F-BAA5-440D286187D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,10 @@ Global
 		{0AF3D3FD-F53D-4774-9D54-95C0D1A86A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AF3D3FD-F53D-4774-9D54-95C0D1A86A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AF3D3FD-F53D-4774-9D54-95C0D1A86A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508CE01C-AFE7-478F-BAA5-440D286187D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508CE01C-AFE7-478F-BAA5-440D286187D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508CE01C-AFE7-478F-BAA5-440D286187D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508CE01C-AFE7-478F-BAA5-440D286187D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
