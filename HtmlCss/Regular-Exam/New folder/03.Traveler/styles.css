@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css2?family=Karla&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap);
+@import url(header.css);
+@import url(footer.css);
+@import url(main.css);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 16px/1.5 ;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    max-width: 50%;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.section-red {
+    background-color: #E14747;
+}
+.section-brown {
+    background-color: #352B2A;
+}
+.section-white {
+    background-color: #F8F0E9;
+}
+
+

@@ -1,0 +1,36 @@
+.site-main-article {
+    align-self: center;
+    align-items: center;
+}
+.article-buttons {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+.site-main-article div {
+    align-self: center;
+    align-items: center;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.site-main-article article {
+    align-self: center;
+    align-items: center;
+    max-width: 60%;
+    padding: 10% 20%;
+}
+.site-main-article article img {
+    align-self: center;
+}
+.site-main-article article h2{
+    color: #352B2A;
+    padding: 10% 0%;
+}
+.site-main-article article p{
+    padding-bottom: 15%;
+}
